@@ -1,18 +1,28 @@
-Input:
 
-CSV file containing student information (Name, Roll Number, Department, Course, Hostel, and Club).
-Implementation:
+Student record management, theoretically, involves organizing and storing information about students in a structured and efficient manner. This typically includes storing details such as student names, roll numbers, and possibly other relevant information like grades, courses enrolled, etc. The management system should allow for easy retrieval, updating, and deletion of student records.
 
-Implement a Node class with 'Next' and 'Element' attributes.
-Implement a Student Record class to store student information.
-Create an abstract Entity class with 'Name' and 'Iterator'.
-Create a linked list class that inherits from the Entity class.
-Implement 'add_student_record' and 'delete_student_record' functions in the linked list class.
-Output:
+The code provides a basic implementation of student record management using linked lists and object-oriented programming concepts. 
 
-Store the results in a text file and test your code using provided test cases.
-Conventions:
+Classes:
 
-File name: student_solution.extension
-Class name: StudentPortfolio
-Function names: Use lowercase letters
+StudentInformation: Represents the basic information about a student, such as name and roll number.
+StudentRecord: Inherits from StudentInformation and adds functionality specific to managing student records.
+Node: Represents a node in a linked list. Each node holds a reference to a StudentRecord object and a pointer to the next node.
+Entity: Represents a group or category to which students belong. It maintains a name and an iterator to traverse the linked list of students.
+LinkedList: Inherits from Entity and represents a linked list of students belonging to a specific entity.
+
+Data Structures:
+
+vector<StudentInformation> students: Stores individual student information.
+vector<LinkedList> EntityArray: Stores entities, each of which contains a linked list of students.
+
+Operations:
+
+add_student: Adds a new student to the system. It creates a StudentRecord object, sets its attributes, and adds it to the appropriate linked list within an entity.
+delete_student: Deletes a student from the system based on their name. It traverses the linked list, finds the student to delete, and removes them from the list.
+read_input_file: Reads input data from a file, parses it, creates student objects, and assigns students to entities based on the provided data.
+
+Input/Output:
+
+Input data is expected to be in a CSV format, where each line represents a student and their associated entities.
+Output operations such as displaying student information or generating reports could be added based on the requirements.
