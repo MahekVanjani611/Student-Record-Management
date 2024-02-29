@@ -22,7 +22,6 @@ add_student: Adds a new student to the system. It creates a StudentRecord object
 delete_student: Deletes a student from the system based on their name. It traverses the linked list, finds the student to delete, and removes them from the list.
 read_input_file: Reads input data from a file, parses it, creates student objects, and assigns students to entities based on the provided data.
 
-**Input/Output:
-**
+**Input/Output:**
 Input data is expected to be in a CSV format, where each line represents a student and their associated entities.
 Output operations such as displaying student information or generating reports could be added based on the requirements.
